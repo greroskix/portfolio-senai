@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão de Estoque - Principal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="cabecalho">
+            <h1>Sistema de Gestão de Estoque</h1>
+            <div class="usuario-info">
+                <span class="nome-usuario">Bem-vindo, <span id="nomeUsuario">Usuário</span></span>
+                <button id="btnLogout" class="btn-logout">Sair</button>
+            </div>
+        </header>
+
+        <main class="conteudo-principal">
+            <h2>Menu Principal</h2>
+            
+            <div class="menu-opcoes">
+                <div class="card-opcao" id="cardCadastroProduto">
+                    <div class="icone-opcao"></div>
+                    <h3>Cadastro de Produto</h3>
+                    <p>Gerencie o cadastro de produtos do estoque</p>
+                    <button class="btn-acessar" onclick="irParaCadastroProduto()">Acessar</button>
+                </div>
+
+                <div class="card-opcao" id="cardGestaoEstoque">
+                    <div class="icone-opcao"></div>
+                    <h3>Gestão de Estoque</h3>
+                    <p>Controle de entrada e saída de materiais</p>
+                    <button class="btn-acessar" onclick="irParaGestaoEstoque()">Acessar</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

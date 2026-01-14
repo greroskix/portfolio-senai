@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produto - Sistema de Gestão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="cabecalho">
+            <h1>Cadastro de Produto</h1>
+            <button class="btn-voltar" onclick="voltarParaPrincipal()">← Voltar</button>
+        </header>
+
+        <main class="conteudo-principal">
+            <div class="secao-busca">
+                <h2>Buscar Produto</h2>
+                <div class="campo-busca">
+                    <input type="text" id="campoBusca" placeholder="Digite o nome do produto para buscar..." class="input-busca">
+                    <button id="btnBuscar" class="btn-buscar">Buscar</button>
+                    <button id="btnLimparBusca" class="btn-limpar">Limpar</button>
+                </div>
+            </div>
+
+            <div class="secao-formulario">
+                <h2 id="tituloFormulario">Cadastrar Novo Produto</h2>
+                <form id="formProduto" class="formulario-produto">
+                    <input type="hidden" id="produtoId" value="">
+                    
+                    <div class="linha-formulario">
+                        <div class="campo-formulario">
+                            <label for="nomeProduto">Nome do Produto: *</label>
+                            <input type="text" id="nomeProduto" name="nomeProduto" required placeholder="Ex: Cimento Portland">
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="categoriaProduto">Categoria: *</label>
+                            <select id="categoriaProduto" name="categoriaProduto" required>
+                                <option value="">Selecione...</option>
+                                <option value="cimento">Cimento</option>
+                                <option value="tinta">Tinta</option>
+                                <option value="argamassa">Argamassa</option>
+                                <option value="fundacao">Fundação</option>
+                                <option value="acabamento">Acabamento</option>
+                                <option value="estrutura">Estrutura</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="linha-formulario">
+                        <div class="campo-formulario">
+                            <label for="quantidadeProduto">Quantidade: *</label>
+                            <input type="number" id="quantidadeProduto" name="quantidadeProduto" required min="0" step="0.01" placeholder="0.00">
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="estoqueMinimo">Estoque Mínimo: *</label>
+                            <input type="number" id="estoqueMinimo" name="estoqueMinimo" required min="0" step="0.01" placeholder="0.00">
+                        </div>
+                    </div>
+
+                    <div class="linha-formulario">
+                        <div class="campo-formulario">
+                            <label for="unidadeMedida">Unidade de Medida: *</label>
+                            <select id="unidadeMedida" name="unidadeMedida" required>
+                                <option value="">Selecione...</option>
+                                <option value="kg">Quilograma (kg)</option>
+                                <option value="l">Litro (l)</option>
+                                <option value="un">Unidade (un)</option>
+                                <option value="m2">Metro quadrado (m²)</option>
+                                <option value="m3">Metro cúbico (m³)</option>
+                            </select>
+                        </div>
+
+                        <div class="campo-formulario">
+                            <label for="dataValidade">Data de Validade:</label>
+                            <input type="date" id="dataValidade" name="dataValidade">
+                        </div>
+                    </div>
+
+                    <div class="linha-formulario">
+                        <div class="campo-formulario">
+                            <label for="corProduto">Cor:</label>
+                            <input type="text" id="corProduto" name="corProduto" placeholder="Ex: Branco, Cinza">
+                        </div>
+                    </div>
+
+                    <div class="campo-formulario">
+                        <label for="descricaoProduto">Descrição:</label>
+                        <textarea id="descricaoProduto" name="descricaoProduto" rows="3" placeholder="Informações adicionais sobre o produto"></textarea>
+                    </div>
+
+                    <div class="botoes-formulario">
+                        <button type="submit" class="btn-salvar">Salvar Produto</button>
+                        <button type="button" class="btn-cancelar" onclick="limparFormulario()">Cancelar</button>
+                    </div>
+                </form>
+
+                <div id="mensagensValidacao" class="mensagens-validacao"></div>
+            </div>
+
+            <div class="secao-listagem">
+                <h2>Produtos Cadastrados</h2>
+                <div class="tabela-container">
+                    <table id="tabelaProdutos" class="tabela-produtos">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Categoria</th>
+                                <th>Quantidade</th>
+                                <th>Estoque Mínimo</th>
+                                <th>Unidade</th>
+                                <th>Validade</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="corpoTabela">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

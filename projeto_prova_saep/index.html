@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Sistema de Gestão de Estoque</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-login">
+        <div class="card-login">
+            <h1>Sistema de Gestão de Estoque</h1>
+            <h2>Login</h2>
+            
+            <form id="formLogin" class="formulario-login">
+                <div class="campo-formulario">
+                    <label for="usuario">Usuário:</label>
+                    <input type="text" id="usuario" name="usuario" required placeholder="Digite seu usuário">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+                </div>
+
+                <button type="submit" class="btn-login">Entrar</button>
+            </form>
+
+            <div id="mensagemErro" class="mensagem-erro" style="display: none;"></div>
+
+            <div style="margin-top: 24px; text-align: center;">
+                <a href="cadastro_usuario.html">Não tem uma conta? Cadastre-se</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

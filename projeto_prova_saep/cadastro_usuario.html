@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Usuário - Sistema de Gestão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-login">
+        <div class="card-login">
+            <h1>Cadastro de Usuário</h1>
+            <h2>Criar Nova Conta</h2>
+            
+            <form id="formCadastroUsuario" class="formulario-login">
+                <div class="campo-formulario">
+                    <label for="nomeCompleto">Nome Completo: *</label>
+                    <input type="text" id="nomeCompleto" name="nomeCompleto" required placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="usuarioCadastro">Usuário: *</label>
+                    <input type="text" id="usuarioCadastro" name="usuarioCadastro" required placeholder="Digite um nome de usuário">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="senhaCadastro">Senha: *</label>
+                    <input type="password" id="senhaCadastro" name="senhaCadastro" required placeholder="Mínimo 6 caracteres" minlength="6">
+                </div>
+
+                <div class="campo-formulario">
+                    <label for="confirmarSenha">Confirmar Senha: *</label>
+                    <input type="password" id="confirmarSenha" name="confirmarSenha" required placeholder="Digite a senha novamente" minlength="6">
+                </div>
+
+                <button type="submit" class="btn-login">Criar Conta</button>
+            </form>
+
+            <div id="mensagemErro" class="mensagem-erro" style="display: none;"></div>
+            <div id="mensagemSucesso" class="mensagem-validacao sucesso" style="display: none;"></div>
+
+            <div style="margin-top: 20px; text-align: center;">
+                <a href="index.html" style="color: #667eea; text-decoration: none;">Já tem uma conta? Faça login</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const formularioCadastro = document.getElementById('formCadastroUsuario');
+            if (formularioCadastro) {
+                formularioCadastro.addEventListener('submit', function(evento) {
+                    evento.preventDefault();
+                    cadastrarNovoUsuario();
+                });
+            }
+        });
+
+        function cadastrarNovoUsuario() {
+            const nomeCompleto = document.getElementById('nomeCompleto').value.trim();
+            const usuario = document.getElementById('usuarioCadastro').value.trim();
+            const senha = document.getElementById('senhaCadastro').value;
+            const confirmarSenha = document.getElementById('confirmarSenha').value;
+            const mensagemErro = document.getElementById('mensagemErro');
+            const mensagemSucesso = document.getElementById('mensagemSucesso');
+
+            mensagemErro.style.display = 'none';
+            mensagemSucesso.style.display = 'none';
+
+            if (!nomeCompleto || !usuario || !senha || !confirmarSenha) {
+                mensagemErro.textContent = 'Por favor, preencha todos os campos.';
+                mensagemErro.style.display = 'block';
+                return;
+            }
+
+            if (senha.length < 6) {
+                mensagemErro.textContent = 'A senha deve ter pelo menos 6 caracteres.';
+                mensagemErro.style.display = 'block';
+                return;
+            }
+
+            if (senha !== confirmarSenha) {
+                mensagemErro.textContent = 'As senhas não coincidem.';
+                mensagemErro.style.display = 'block';
+                return;
+            }
+
+            let usuariosCadastrados = [];
+            const usuariosSalvos = localStorage.getItem('usuariosCadastrados');
+            if (usuariosSalvos) {
+                usuariosCadastrados = JSON.parse(usuariosSalvos);
+            }
+
+            const usuarioExiste = usuariosCadastrados.find(function(u) {
+                return u.usuario === usuario;
+            });
+
+            if (usuarioExiste) {
+                mensagemErro.textContent = 'Este nome de usuário já está em uso.';
+                mensagemErro.style.display = 'block';
+                return;
+            }
+
+            const novoUsuario = {
+                id: Date.now(),
+                nome: nomeCompleto,
+                usuario: usuario,
+                senha: senha,
+                dataCadastro: new Date().toISOString()
+            };
+
+            usuariosCadastrados.push(novoUsuario);
+            localStorage.setItem('usuariosCadastrados', JSON.stringify(usuariosCadastrados));
+
+            mensagemSucesso.textContent = 'Usuário cadastrado com sucesso! Redirecionando para login...';
+            mensagemSucesso.style.display = 'block';
+
+            setTimeout(function() {
+                window.location.href = 'index.html';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
+
