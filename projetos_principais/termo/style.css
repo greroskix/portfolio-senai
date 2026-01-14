@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+}
+
+body {
+    background-color: #6e5c62;
+    color: white;
+}
+
+.container-titulo {
+    text-align: center;
+    width: 510px;
+    margin-top: 1rem;
+    margin-bottom: 60px;
+}
+
+.container-aplicativo {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.linha-letras {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.coluna-letra {
+    background-color: #f4f3f1;
+    color: #252525;
+    height: 40px;
+    width: 48px;
+    border-radius: 0.25rem;
+    margin-right: 0.5rem;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.digitando {
+    border: 3px solid #252525;
+}
+
+.certa {
+    background-color: #3aa394;
+    color: #f4f3f1;
+}
+
+.errada {
+    background-color: #943e3c;
+    color: #f4f3f1;
+}
+
+.deslocada {
+    background-color: #d3ad69;
+    color: #f4f3f1;
+}
+
+.container-teclado {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.linha-teclado {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+    font-size: 20px;
+}
+
+.linha-teclado.nao-alfabetica button {
+    margin: 0 10px;
+    background-color: #4C4347;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0.25rem;
+}
+
+.linha-teclado:not(.nao-alfabetica) button {
+    width: 30px;
+    height: 40px;
+    border-radius: 0.25rem;
+    margin-right: 0.25rem;
+    border: 1px solid #252525;
+    background-color: #4C4347;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}

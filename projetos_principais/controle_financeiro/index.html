@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <img class="receba" src="img/cat_with_money.png">
+    <header>
+        <div>
+            <p class="inicio">Bem - Vindo André!</p>
+            <p class="inicio2"><i>Esse é o seu controle financeiro</i></p>
+        </div>
+    </header>   
+    <main>
+        <div class="resumo">
+            <div>
+                Entradas: R$
+                <span class="valor-entradas">0.00</span>
+            </div>
+            <div>
+                Saídas: R$
+                <span class="valor-saidas">0.00</span>
+            </div>
+            <div>
+                Total: R$
+                <span class="valor-total">0.00</span>
+            </div>
+        </div>
+
+        <div class="novo-item">
+            <div class="campo-descricao">
+                <label for="descricao">Descrição</label>
+                <input type="text" id="descricao" />
+            </div>
+            <div class="campo-valor">
+                <label for="valor">Valor</label>
+                <input type="number" id="valor" />
+            </div>
+            <div class="campo-tipo">
+                <label for="tipo">Tipo</label>
+                <select id="tipo">
+                    <option>Entrada</option>
+                    <option>Saída</option>
+                </select>
+            </div>
+            <button id="botao-adicionar">Incluir</button>
+        </div>
+
+        <div class="tabela-itens">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Descrição</th>
+                        <th class="coluna-valor">Valor</th>
+                        <th class="coluna-tipo">Tipo</th>
+                        <th class="coluna-acao"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</html>

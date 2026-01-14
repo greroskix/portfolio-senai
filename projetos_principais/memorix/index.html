@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <title>Memorix</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    @font-face {
+      font-family: "montserrat-bold";
+      src: url(font/montserrat/montserrat/static/Montserrat-Bold.ttf);
+    }
+    @font-face {
+      font-family: "montserrat";
+      src: url(font/montserrat/montserrat/Montserrat-VariableFont_wght.ttf);
+    }
+
+    h1{
+        color: #C1272C;
+        margin: 50px
+    }
+    h2{
+        color: #c1272c;
+        margin: 50px;
+    }
+     body {
+      height: 100vh;
+      background-color: #F5F6F8;
+      color: black;
+      font-family: "montserrat";
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+
+    .botao {
+        font-size: 20px;
+        background-color: #C1272C;
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-family: "montserrat-bold";
+        transition: background-color 0.3s ease;
+        width: 175px;
+        height: 60px;
+        display: flex; 
+        align-items: center; 
+        justify-content: center; 
+        margin: 50px;
+    }
+    .botao:hover {
+      background-color: #851418;
+      transition: 0.5s;
+    transform: translateY(-6px);
+    }
+    .receba{
+        color: #7e7676;
+    }
+    
+    
+  </style> 
+</head>
+<body>
+    
+  <div class="container" data-aos="zoom-in" data-aos-delay="300">
+    <Img src="img/logo_memorix.png" width="350"></Img>
+    <a href="cores.html" class="botao">Vamos Jogar!</a>
+    <p class="receba">Desenvolvido por: André Greroski, Bruna Campos, Lais Faustino e Pedro Hiago.</p>
+    <p class="receba">Técnico em Desenvolvimento de Sistemas.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

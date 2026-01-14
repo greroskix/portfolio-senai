@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Senhas Seguras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="conteiner">
+        <h1>Gerador de Senhas Seguras</h1>
+        <div class="exibicao-senha">
+            <input type="text" id="senha" readonly>
+            <button class="botao-copiar" onclick="copiarSenha()">Copiar</button>
+        </div>
+        <div class="opcoes">
+            <div class="opcao">
+                <span>Comprimento da senha:</span>
+                <input type="number" id="comprimento" class="entrada-comprimento" value="12" min="4" max="50">
+            </div>
+            <div class="opcao">
+                <span>Letras minúsculas</span>
+                <label class="alternador">
+                    <input type="checkbox" id="minusculas" checked>
+                    <span class="deslizador"></span>
+                </label>
+            </div>
+            <div class="opcao">
+                <span>Letras maiúsculas</span>
+                <label class="alternador">
+                    <input type="checkbox" id="maiusculas" checked>
+                    <span class="deslizador"></span>
+                </label>
+            </div>
+            <div class="opcao">
+                <span>Números</span>
+                <label class="alternador">
+                    <input type="checkbox" id="numeros" checked>
+                    <span class="deslizador"></span>
+                </label>
+            </div>
+            <div class="opcao">
+                <span>Caracteres especiais</span>
+                <label class="alternador">
+                    <input type="checkbox" id="especiais" checked>
+                    <span class="deslizador"></span>
+                </label>
+            </div>
+        </div>
+        <button class="botao-gerar" onclick="gerarSenha()">Gerar Senha</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>

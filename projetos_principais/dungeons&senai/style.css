@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "montserrat-bold";
+    src: url('font/montserrat/static/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "montserrat";
+    src: url('font/montserrat/Montserrat-VariableFont_wght.ttf') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+body {
+    background-image: url(img/fundo.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "montserrat";
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    z-index: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: -1; 
+}
+h1{
+    color: #b30303;
+    transition: transform 0.3s ease;
+    font-family: "montserrat-bold";
+}
+.senai {
+    display: block;
+    max-width: 160px;
+    height: auto;
+    max-height: 160px;
+    margin: 12px auto;
+    filter: drop-shadow(0 6px 12px rgba(0,0,0,0.6));
+    transition: transform 0.35s ease;
+    object-fit: contain; /* garante que a imagem não estique */
+}
+p {
+  margin-bottom: 20px;
+}
+button {
+    margin-top: 20px;;
+    background: #b30303;
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 15px;
+}
+
+button:hover {
+    background: hsl(0, 74%, 45%);
+    transform: translateY(-10px);
+    transition: transform 0.3s;
+}
+a{
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+}
+h1:hover{
+    transform: translateY(-10px);
+    transition: transform 0.3s;
+}
+
+/* Card for story */
+.card {
+    background: linear-gradient(180deg, rgba(0,0,0,0.45), rgba(0,0,0,0.55));
+    max-width: 900px;
+    margin: 24px auto;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.5);
+}
+
+.choices{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+
+/* Buttons */
+button {
+    margin-top: 20px;
+    background: linear-gradient(90deg,#b30303,#e03a3a);
+    color: white;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    padding: 12px 18px;
+    box-shadow: 0 8px 18px rgba(179,3,3,0.22);
+}
+
+button:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.45);
+}
+
+button:focus{outline: 3px solid rgba(255,255,255,0.10);outline-offset:4px}
+
+/* Start screen */
+.start-screen{
+    position: fixed;
+    inset:0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background: linear-gradient(180deg, rgba(0,0,0,0.65), rgba(0,0,0,0.85));
+    z-index: 1000;
+    transition: opacity .6s ease, transform .6s ease;
+}
+
+.start-content{
+    text-align:center;
+    color: #fff;
+    padding: 36px 44px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+    border-radius: 14px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 18px 50px rgba(0,0,0,0.6);
+}
+
+.start-content h1{font-size:48px;margin:0;color:#ffd9d9;text-shadow:0 8px 30px rgba(179,3,3,0.22);}
+.start-content .subtitle{margin-top:10px;color:#ffece3}
+.start-content .start-credits{margin-top:12px;font-size:0.9rem;color:#ffece3;opacity:0.85}
+.start-content button{margin-top:18px;padding:14px 26px;font-weight:600}
+
+.start-screen.hide{opacity:0;transform: translateY(-12px);pointer-events:none}
+
+#game.hidden{opacity:0;visibility:hidden;transform: translateY(8px);transition: opacity .6s, transform .6s, visibility 0s linear .6s}
+#game.visible{opacity:1;visibility:visible;transform:none;transition: opacity .6s, transform .6s}
+
+/* Small floating animation */
+@keyframes float {0%{transform:translateY(0)}50%{transform:translateY(-6px)}100%{transform:translateY(0)}}
+.start-content h1{animation: float 4s ease-in-out infinite}
+
+/* Responsive tweaks */
+@media (max-width:600px){
+    .start-content{padding:20px}
+    .start-content h1{font-size:32px}
+    .card{padding:18px}
+    button{width:100%}
+}

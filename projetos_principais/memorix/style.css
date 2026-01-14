@@ -1,0 +1,107 @@
+@font-face {
+  font-family: "montserrat-bold";
+  src: url(font/montserrat/montserrat/static/Montserrat-Bold.ttf);
+}
+
+@font-face {
+  font-family: "montserrat";
+  src: url(font/montserrat/montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+body {
+  text-align: center;
+  background-color: #F5F6F8;
+  color: black;
+  font-family: "montserrat";
+}
+
+h1 {
+  font-family: "montserrat-bold";
+  font-size: 48px;
+  color: #C1272C;
+}
+
+.jogo {
+  display: grid;
+  grid-template-columns: repeat(2, 150px);
+  grid-template-rows: repeat(2, 150px);
+  gap: 20px;
+  justify-content: center;
+  margin: 40px auto;
+}
+
+.cor {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.2s, transform 0.3s;
+  border: px solid rgba(0, 0, 0, 0.3);
+}
+
+.cor:hover {
+  transform: scale(1.05);
+  transform: translateY(-5px);
+}
+
+.verde {
+  background: linear-gradient(135deg, #007932, #64dd17);
+  border-top-left-radius: 75px;
+}
+
+.vermelho {
+  background: linear-gradient(135deg, #d50000, #ff1744);
+  border-top-right-radius: 75px;
+}
+
+.amarelo {
+  background: linear-gradient(135deg, #cca700, #ffeb3b);
+  border-bottom-left-radius: 75px;
+}
+
+.azul {
+  background: linear-gradient(135deg, #1e88e5, #3949ab);
+  border-bottom-right-radius: 75px;
+}
+
+#botaoIniciar {
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #C1272C;
+  color: white;
+  border: none;
+  border-radius: 15px;
+  font-family: "montserrat-bold";
+  transition: 0.5s;
+}
+
+#botaoIniciar:hover {
+  background-color: #851418;
+  cursor: pointer;
+  transform: translateY(-6px);
+}
+
+#nivel {
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+.desen{
+    color: gray;
+    margin-top: 3%;
+}
+.senai {
+  margin-left: 2%;
+  width: 200px;
+  display: flex;
+  margin-bottom: -150px;
+  transition: 0.5s; /* <- Mover para cá */
+}
+
+.senai:hover {
+  cursor: pointer;
+  transform: translateY(-6px);
+}
