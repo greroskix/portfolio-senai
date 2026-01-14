@@ -1,11 +1,9 @@
-/* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Corpo da página */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #e5e5e5 0%, #d4d4d4 100%);
@@ -16,7 +14,7 @@ body {
     padding: 20px;
 }
 
-/* Container principal do portfólio */
+
 .container-portfolio {
     max-width: 480px;
     width: 100%;
@@ -26,14 +24,14 @@ body {
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
-/* Seção do cabeçalho */
+
 .secao-cabecalho {
     background: linear-gradient(135deg, #f8f6f2 0%, #ede9e1 100%);
     padding: 50px 30px 40px;
     text-align: center;
 }
 
-/* Imagem de perfil */
+
 .imagem-perfil {
     width: 140px;
     height: 140px;
@@ -54,7 +52,7 @@ body {
     object-fit: cover;
 }
 
-/* Nome do desenvolvedor */
+
 .nome {
     font-size: 1.8em;
     font-weight: 700;
@@ -63,7 +61,7 @@ body {
     letter-spacing: 0.5px;
 }
 
-/* Título/profissão */
+
 .titulo {
     font-size: 1em;
     color: #666;
@@ -71,7 +69,7 @@ body {
     font-weight: 400;
 }
 
-/* Container dos botões de navegação */
+
 .botoes-navegacao {
     display: flex;
     flex-direction: column;
@@ -79,7 +77,7 @@ body {
     padding: 0 15px;
 }
 
-/* Estilo dos botões de navegação */
+
 .botao-nav {
     background: white;
     border: 2px solid #2c2c2c;
@@ -103,7 +101,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Botão escuro (alternativo) */
+
 .botao-nav.escuro {
     background: #2c2c2c;
     color: white;
@@ -115,26 +113,26 @@ body {
     border-color: #444;
 }
 
-/* Seção sobre mim */
+
 .secao-sobre {
     background: #3a3a3a;
     padding: 40px 30px;
     color: white;
 }
 
-/* Cabeçalho da seção sobre */
+
 .cabecalho-sobre {
     margin-bottom: 25px;
 }
 
-/* Handle/apelido do usuário */
+
 .handle-usuario {
     font-size: 0.9em;
     color: #999;
     margin-top: 5px;
 }
 
-/* Texto sobre mim */
+
 .texto-sobre {
     line-height: 1.8;
     color: #ddd;
@@ -142,7 +140,7 @@ body {
     margin-bottom: 20px;
 }
 
-/* Stack de tecnologias */
+
 .pilha-tecnologias {
     display: flex;
     flex-wrap: wrap;
@@ -150,7 +148,7 @@ body {
     margin-top: 20px;
 }
 
-/* Badge de tecnologia */
+
 .badge-tecnologia {
     background: rgba(255, 255, 255, 0.15);
     padding: 8px 16px;
@@ -160,7 +158,7 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-/* Links sociais */
+
 .links-sociais {
     display: flex;
     justify-content: center;
@@ -192,7 +190,7 @@ body {
     transform: translateY(-3px);
 }
 
-/* Modal para projetos */
+
 .janela-modal {
     display: none;
     position: fixed;
@@ -212,7 +210,6 @@ body {
     justify-content: center;
 }
 
-/* Conteúdo do modal */
 .conteudo-modal {
     background: white;
     border-radius: 20px;
@@ -223,7 +220,7 @@ body {
     position: relative;
 }
 
-/* Cabeçalho do modal */
+
 .cabecalho-modal {
     background: #2c2c2c;
     color: white;
@@ -237,7 +234,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Botão fechar modal */
+
 .botao-fechar {
     position: absolute;
     top: 20px;
@@ -261,19 +258,19 @@ body {
     transform: rotate(90deg);
 }
 
-/* Corpo do modal */
+
 .corpo-modal {
     padding: 30px;
 }
 
-/* Lista de projetos */
+
 .lista-projetos {
     display: flex;
     flex-direction: column;
     gap: 15px;
 }
 
-/* Link do projeto */
+
 .link-projeto {
     display: block;
     padding: 18px;
@@ -291,7 +288,7 @@ body {
     transform: translateX(5px);
 }
 
-/* Informações do projeto */
+
 .info-projeto h3 {
     font-size: 1.1em;
     margin-bottom: 5px;
@@ -304,7 +301,7 @@ body {
     line-height: 1.4;
 }
 
-/* Informações de contato */
+
 .info-contato {
     display: flex;
     flex-direction: column;
@@ -351,7 +348,7 @@ body {
     margin: 0;
 }
 
-/* Responsividade para mobile */
+
 @media (max-width: 600px) {
     .container-portfolio {
         border-radius: 0;
