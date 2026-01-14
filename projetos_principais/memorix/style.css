@@ -13,6 +13,9 @@ body {
   background-color: #F5F6F8;
   color: black;
   font-family: "montserrat";
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 20px;
 }
 
 h1 {
@@ -94,14 +97,130 @@ h1 {
     margin-top: 3%;
 }
 .senai {
-  margin-left: 2%;
   width: 200px;
-  display: flex;
-  margin-bottom: -150px;
-  transition: 0.5s; /* <- Mover para cá */
+  display: block;
+  transition: 0.5s;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
 }
 
 .senai:hover {
   cursor: pointer;
   transform: translateY(-6px);
+}
+
+.inicio {
+  margin-top: 60px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.receba {
+  margin: 20px 0;
+}
+
+
+@media (max-width: 768px) {
+  .senai {
+    width: 150px;
+    position: relative;
+    left: auto;
+    top: auto;
+    display: block;
+    margin: 30px auto 20px auto;
+    transform: none;
+  }
+
+  .senai:hover {
+    transform: translateY(-6px);
+  }
+
+  h1 {
+    font-size: 32px;
+    margin: 20px 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .jogo {
+    grid-template-columns: repeat(2, 120px);
+    grid-template-rows: repeat(2, 120px);
+    gap: 15px;
+    margin: 20px auto;
+  }
+
+  .cor {
+    width: 120px;
+    height: 120px;
+  }
+
+  #botaoIniciar {
+    font-size: 16px;
+    padding: 12px 24px;
+    margin-top: 15px;
+  }
+
+  #nivel {
+    font-size: 18px;
+    margin-top: 15px;
+  }
+
+  .desen {
+    font-size: 12px;
+    margin-top: 20px;
+    padding: 0 10px;
+  }
+
+  .inicio {
+    margin-top: 0;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  .senai {
+    width: 130px;
+    position: relative;
+    left: auto;
+    top: auto;
+    display: block;
+    margin: 25px auto 15px auto;
+    transform: none;
+  }
+
+  .senai:hover {
+    transform: translateY(-6px);
+  }
+
+  h1 {
+    font-size: 24px;
+    margin: 15px 0;
+    position: relative;
+    z-index: 1;
+  }
+
+  .jogo {
+    grid-template-columns: repeat(2, 100px);
+    grid-template-rows: repeat(2, 100px);
+    gap: 12px;
+    margin: 15px auto;
+  }
+
+  .cor {
+    width: 100px;
+    height: 100px;
+  }
+
+  #botaoIniciar {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+
+  .inicio {
+    margin-top: 0;
+  }
 }
