@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form method="post" action='https://formsquash.io/f/ApuK22gcHDvMTTuUQgTf'>
+      <fieldset>
+        <h2>FICHA DE MATRÍCULA</h2>
+            <label for="data-matricula">Data da Matrícula: <input id="data-matricula" name="data-matricula" type="date" required placeholder="Digite aqui..."/></label>
+            <label for="codigo-matricula">Código da Matrícula: <input id="codigo-matricula" name="codigo-matricula" type="number" required minlength="4" placeholder="Digite aqui..."/></label>
+      </fieldset>
+      <fieldset>
+        <h2>DADOS DO ALUNO</h2>
+        <label for="nome">Nome: <input id="nome" name="nome" type="text" required placeholder="Digite aqui..."/></label>
+        <label for="data-nascimento">Data de Nasc: <input id="data-nascimento" name="data-nascimento" type="date" required placeholder="Digite aqui..."/></label>
+        <label for="naturalidade">Naturalidade: <input id="naturalidade" name="naturalidade" type="text" required placeholder="Digite aqui..."/></label>
+        <label for="uf">UF:
+        <select id="uf" name="uf">
+            <option value="AC">Acre (AC)</option>
+            <option value="AL">Alagoas (AL)</option>
+            <option value="AP">Amapá (AP)</option>
+            <option value="AM">Amazonas (AM)</option>
+            <option value="BA">Bahia (BA)</option>
+            <option value="CE">Ceará (CE)</option>
+            <option value="DF">Distrito Federal (DF)</option>
+            <option value="ES">Espírito Santo (ES)</option>
+            <option value="GO">Goiás (GO)</option>
+            <option value="MA">Maranhão (MA)</option>
+            <option value="MT">Mato Grosso (MT)</option>
+            <option value="MS">Mato Grosso do Sul (MS)</option>
+            <option value="MG">Minas Gerais (MG)</option>
+            <option value="PA">Pará (PA)</option>
+            <option value="PB">Paraíba (PB)</option>
+            <option value="PR">Paraná (PR)</option>
+            <option value="PE">Pernambuco (PE)</option>
+            <option value="PI">Piauí (PI)</option>
+            <option value="RJ">Rio de Janeiro (RJ)</option>
+            <option value="RN">Rio Grande do Norte (RN)</option>
+            <option value="RS">Rio Grande do Sul (RS)</option>
+            <option value="RO">Rondônia (RO)</option>
+            <option value="RR">Roraima (RR)</option>
+            <option value="SC">Santa Catarina (SC)</option>
+            <option value="SP">São Paulo (SP)</option>
+            <option value="SE">Sergipe (SE)</option>
+            <option value="TO">Tocantins (TO)</option>
+          </select>
+          </label>
+        <label for="cpf">CPF: <input id="cpf" name="cpf" type="number" required minlength="11" placeholder="000.000.000-00" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"/></label>
+        <label for="rg">RG: <input id="rg" name="rg" type="number" required minlength="5" placeholder="Digite aqui..."/></label>
+        <label for="nome">Nome: <input id="nome" name="nome" type="text" required placeholder="Digite aqui..."/></label>
+        <label for="orgao-expeditor">Orgão Expeditor: <input id="orgao-expeditor" name="orgao-expeditor" type="text" required placeholder="Digite aqui..."/></label>
+        <label for="sexo">Sexo: </label>
+          <select id="sexo" name="sexo">
+            <option value="masc">Masculino</option>
+            <option value="femin">Feminino</option>
+          </select>
+      </fieldset>
+      <fieldset>
+        <h2>FILIAÇÃO</h2>
+            <label for="pai">Pai: <input id="pai" name="pai" type="text" required placeholder="Digite aqui..."/></label>
+            <label for="telefone-pai">Telefone do Pai: <input id="telefone-pai" name="telefone-pai" type="number" required minlength="11" placeholder="(00) 00000-0000" 
+                pattern="\(\d{2}\) \d{5}-\d{4}"/></label>
+            <label for="mae">Mãe: <input id="mae" name="mae" type="text" required placeholder="Digite aqui..."/></label>
+            <label for="telefone-mae">Telefone da Mãe: <input id="telefone-mae" name="telefone-mae" type="number" required minlength="11" placeholder="(00) 00000-0000" pattern="\(\d{2}\) \d{5}-\d{4}"/></label>
+            <label for="nome-do-responsavel">Nome do Responsável: <input id="nome-do-responsavel" name="nome-do-responsavel" type="text" required placeholder="Digite aqui..."/></label>
+            <label for="grau-de-parentesco">Grau de Parentesco: <input id="grau-de-parentesco" name="grau-de-parentesco" type="text" required placeholder="Digite aqui..."/></label>
+            <label for="telefone-responsavel">Telefone do Responsável: <input id="telefone-responsavel" name="telefone-responsavel" type="number" required minlength="11" placeholder="(00) 00000-0000" pattern="\(\d{2}\) \d{5}-\d{4}"/></label>
+      </fieldset>
+      <fieldset>
+        <h2>ENDEREÇO</h2>
+            <label for="rua">Rua: <input id="rua" name="rua" type="text" required placeholder="Digite aqui..."/></label>
+            <label for="bairro">Bairro: <input id="bairro" name="bairro" type="text" required placeholder="Digite aqui..."/></label>
+            <label for="complemento">Complemento: ( Opcional ) <input id="complemento" name="complemento" type="text" placeholder="Digite aqui..."/></label>
+            <label for="cep">CEP: <input id="cep" name="cep" type="number" required minlength="8" placeholder="00000-000" pattern="\d{5}-\d{3}"/></label>
+            <label for="cidade-estado">Cidade/Estado: <input id="cidade-estado" name="cidade-estado" type="text" required placeholder="Digite aqui..."/></label>
+      </fieldset>
+      <fieldset>
+        <h2>ANO ESCOLAR</h2>
+        <label for="ed-infantil:maternal"><input id="ed-infantil:maternal" type="radio" name="ed-infantil:maternal" class="inline"/> Ed. Infantil: Maternal</label>
+        <label for="pre-escola"><input id="pre-escola" type="radio" name="pre-escola" class="inline"/> Pré-Escola</label>
+        <label for="ensino-fundamental"><input id="ensino-fundamental" type="radio" name="ensino-fundamental" class="inline"/> Ensino Fundamental</label>
+        <label for="ensino-medio"><input id="ensino-medio" type="radio" name="ensino-medio" class="inline"/> Ensino Médio</label>
+      </fieldset>
+      <fieldset>
+        <h2>OBSERVAÇÕES</h2>
+        <label for="bio">
+            <textarea id="bio" name="bio" rows="3" cols="30" placeholder="Digite aqui..."></textarea>
+          </label>
+      </fieldset>
+      <label for="terms-and-conditions">
+        <input class="inline" id="terms-and-conditions" type="checkbox" required name="terms-and-conditions" /> I accept the <a href="terms.html">terms and conditions</a>
+      </label>
+      <input type="submit" value="Enviar" />
+    </form>
+  </body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jukebox</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+            color: #fff;
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 30px;
+            font-size: 20px;
+        }
+
+        .botao {
+            margin: 10px;
+            padding: 15px 25px;
+            font-size: 1em;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .botao:hover {
+            opacity: 0.9;
+            transform: translateY(-10px);
+            transition: transform 0.3s;
+        }
+
+        #audio {
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .parar {
+            background-color: #ff0400;
+            color: white;
+        }
+
+        .parar:hover {
+            background-color: #be0603;
+        }
+
+        #foto {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+            display: none;
+            margin: 20px auto;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Jukebox</h1>
+    <p>Selecione como está se sentindo e ouça uma música:</p>
+
+    <button class="botao" onclick="tocar('alegria')">Alegria</button>
+    <button class="botao" onclick="tocar('tristeza')">Tristeza</button>
+    <button class="botao" onclick="tocar('aventura')">Aventura</button>
+    <button class="botao" onclick="tocar('amor')">Amor</button>
+    <button class="botao" onclick="tocar('terror')">Mistério/Terror</button>
+    <button class="botao" onclick="tocar('calma')">Calma</button>
+    <button class="botao" onclick="tocar('energia')">Animação</button>
+    <button class="botao" onclick="tocar('suspense')">Suspense</button>
+    <button class="botao parar" onclick="parar()">Parar</button>
+
+    <div>
+        <img id="foto" src="" alt="Imagem tema">
+        <p id="nomeMusica"></p>
+        <audio id="audio" controls></audio>
+    </div>
+
+    <script>
+        function tocar(tipo) {
+            const audio = document.getElementById("audio")
+            const foto = document.getElementById("foto")
+            const nomeMusica = document.getElementById("nomeMusica")
+
+            let musica = ""
+            let imagem = ""
+            let cor = ""
+            let nome = ""
+
+            if (tipo === "alegria") {
+                musica = "audio/alegria.mp3"
+                imagem = "capa/capa_alegria.png"
+                cor = "#2B6C44"
+                nome = "Natiruts - Quero Ser Feliz Também"
+            } else if (tipo === "tristeza") {
+                musica = "audio/triste.mp3"
+                imagem = "capa/capa_triste.png"
+                cor = "#c088dc"
+                nome = "Luqeta - Causa'dor Speedplug"
+            } else if (tipo === "aventura") {
+                musica = "audio/aventura.mp3"
+                imagem = "capa/capa_aventura.png"
+                cor = "#d23b3b  "
+                nome = "One Piece OST - Overtaken"
+            } else if (tipo === "amor") {
+                musica = "audio/amor.mp3"
+                imagem = "capa/capa_amor.png"
+                cor = "#f28a42"
+                nome = "Tyler, The Creator - See You Again"
+            } else if (tipo === "terror") {
+                musica = "audio/terror.mp3"
+                imagem = "capa/capa_terror.png"
+                cor = "#d5d5d5"
+                nome = "Silent Hill - Soundtrack"
+            } else if (tipo === "calma") {
+                musica = "audio/calma.mp3"
+                imagem = "capa/capa_calma.png"
+                cor = "#4baa32"
+                nome = "Title Theme - The Legend of Zelda: Ocarina of Time OST"
+            } else if (tipo === "energia") {
+                musica = "audio/animada.mp3"
+                imagem = "capa/capa_animada.png"
+                cor = "#d62828"
+                nome = "Playboi Carti - ILoveUIHateU"
+            } else if (tipo === "suspense") {
+                musica = "audio/suspense.mp3"   
+                imagem = "capa/capa_suspense.png"
+                cor = "#d1a740"
+                nome = "Gwyn, Lord of Cinder - Dark Souls Soundtrack"
+            }
+
+            document.body.style.backgroundColor = cor
+            foto.src = imagem
+            foto.style.display = "block"
+
+            audio.src = musica
+            audio.style.display = "block"
+            audio.play()
+
+            nomeMusica.innerText = nome
+        }
+
+        function parar() {
+            const audio = document.getElementById("audio")
+            const foto = document.getElementById("foto")
+            const nomeMusica = document.getElementById("nomeMusica")
+
+            audio.pause()
+            audio.currentTime = 0
+            audio.style.display = "none"
+
+            foto.style.display = "none"
+            nomeMusica.innerText = ""
+
+            document.body.style.backgroundColor = "#333"
+        }
+    </script>
+</body>
+
+</html>

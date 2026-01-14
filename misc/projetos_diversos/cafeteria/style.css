@@ -1,0 +1,207 @@
+@font-face {
+    font-family: "mont-bold";
+    src: url(font/montserrat/static/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: "mont-normal";
+    src: url(font/montserrat/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+    font-family: "mont-italic";
+    src: url(font/montserrat/Montserrat-Italic-VariableFont_wght.ttf);
+}
+body{
+    background-image: url(img/fundo.png);
+    background-repeat: no-repeat;
+    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+.menu{
+    width: 50%;
+    background-color: #553d2a;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1000px;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px){
+    .menu{
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px){
+    .menu{
+        width: 100%;
+        padding: 10px;
+    }
+}
+.container{
+    width: 85%;
+    background-color: #69503c;
+    margin: auto;
+    padding: 10px;
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 95%;
+        padding: 15px;
+    }
+}
+
+@media (max-width: 480px){
+    .container{
+        width: 100%;
+        padding: 10px;
+    }
+}
+.produtos, .price{
+    display: inline-block;
+    font-size: 18px;
+    width: 75%;
+    margin-bottom: 0;
+}
+.produtos{
+    font-family: "mont-bold";
+    letter-spacing: 2px;
+}
+.price{
+    text-align: right;
+    width: 25%;
+    font-family: "mont-normal";
+}
+.desc{
+    font-family: "mont-normal";
+}
+.ordem{
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 480px){
+    .ordem{
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    font-family: "mont-bold";
+    letter-spacing: 2px;
+}
+hr{
+    height: 2px;
+    background-color: #320000;
+    border-color: black;
+    width: 50%;
+    margin-top: 50px;
+}
+.rodape p{
+    font-size: 15px;
+    font-family: "mont-italic";
+    text-align: center;
+}
+.rodape h2{
+    font-family: "mont-bold";
+    text-align: center;
+    letter-spacing: 4px;
+}
+.cafe{
+    display: flex;
+    height: 100px;
+    margin: auto;
+    width: 100px;
+    justify-content: center;
+}
+footer{
+    padding-bottom: 20px;
+}
+
+/* Media Queries gerais */
+@media (max-width: 768px){
+    h1{
+        font-size: 1.8em;
+        padding: 15px;
+    }
+    
+    .rodape h2{
+        font-size: 1.5em;
+        padding: 10px;
+    }
+    
+    .produtos, .price{
+        font-size: 16px;
+    }
+    
+    .desc{
+        font-size: 14px;
+        margin-top: 5px;
+        display: block;
+    }
+    
+    hr.borda{
+        width: 70%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 480px){
+    h1{
+        font-size: 1.5em;
+        padding: 12px;
+    }
+    
+    .rodape h2{
+        font-size: 1.3em;
+        letter-spacing: 2px;
+    }
+    
+    .produtos, .price{
+        font-size: 15px;
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .price{
+        text-align: left;
+        margin-top: 5px;
+    }
+    
+    .desc{
+        font-size: 13px;
+        margin-top: 8px;
+    }
+    
+    hr.borda{
+        width: 80%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    
+    .rodape p{
+        font-size: 13px;
+        padding: 0 10px;
+    }
+    
+    .cafe{
+        height: 80px;
+        width: 80px;
+    }
+}
+
+/* Ajuste para background em mobile */
+@media (max-width: 768px){
+    body{
+        background-attachment: scroll;
+        background-size: cover;
+    }
+}

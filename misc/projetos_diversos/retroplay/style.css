@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: 0;
+}
+@font-face {
+    font-family: "mario";
+    src: url(fonts/SuperMario256.ttf);
+}
+@font-face {
+    font-family: "mont-black";
+    src: url(fonts/montserrat/static/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: "mont-normal";
+    src: url(fonts/montserrat/Montserrat-VariableFont_wght.ttf);
+}
+header{
+    width: 100%;
+}
+.cabecalho-conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bg-home{
+    position: relative;
+}
+.bg-home::before{
+        content: "";
+        background-image: url(img3/bg.svg);
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: absolute;
+}
+i{
+    color: #fff;
+}
+.cabecalho-botao{
+    color: #fff;
+    padding: 8px 24px;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: background-color 0.5s;
+    
+}
+.cabecalho-botao:hover{
+    cursor: pointer;
+}
+.cabecalho-icones{
+    gap: 14px;
+    display: flex;
+    padding: 50px;
+}
+.principal{
+    color: #fff;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+}
+.principal h1{
+    text-align: center;
+    line-height: 150%;
+    max-width: 940px;
+    font-size: 46px;
+}
+.principal p{
+    text-align: center;
+    margin: 14px 0;
+}
+.botao-contato{
+    color: #fff;
+    background-color: #2e9eff;
+    padding: 14px 28px;
+    border: 0;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    display: inline-block;
+}
+.botao-contato:hover{
+    animation: scaleButtom 0.8s alternate infinite;
+}
+@keyframes scaleButtom {
+    from {
+        transform: scale(1) ;
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+.sobre{
+    background-color: #06121e;
+    color: #fff;
+}
+.sobre-conteudo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 34px 14px 64px 14px;
+}
+.sobre-conteudo  img{
+    max-width: 570px;
+}
+.sobre-conteudo div{
+    flex: 1;
+}
+.sobre-conteudo h2{
+    font-size: 38px;
+    margin-bottom: 24px;
+}
+.sobre-conteudo p{
+    margin-bottom: 14px;
+    line-height: 150%;
+}
+.servicos-conteudo{
+    background-color: #2e9eff;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 54px 14px;
+}
+.servicos-conteudo h2{
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 14px;
+}
+.servicos-conteudo p{
+    line-height:150%;
+    margin-bottom: 14px;
+    text-align: left;
+    max-width: 780px;
+}
+.cortes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 0 44px 34px 34px;
+}
+.corte{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color:#fff;
+    border-radius: 8px;
+    box-shadow: 0px -1px 17px -4px rgba(0, 0, 0, 0.45);
+    color: black;
+    overflow: hidden;
+}
+.corte img{
+    width: 100%;
+    transition: transform 0.2s;
+}
+.corte img:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+.corte-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 14px;
+    background-color: #fff;
+    z-index: 99; 
+
+}
+.corte-info button{
+    color: #fff;
+    background-color: #2e9eff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 0;
+    cursor: default;
+}
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    flex-direction: column;
+    padding: 54px 0;
+    color: #fff;
+}
+.rodape h2{
+    font-size: 38px;
+    margin-bottom: 24px;
+}
+.rodape-icones{
+    display: flex;
+    gap:8px;
+    color:#fff;
+    align-items: center;
+}
+.endereco{
+    text-align: center;
+    color:#fff
+}
+.endereco a{
+    color: #FFF;
+    line-height: 200%;
+}
+body{
+    font-family: "Sora", sans-serif;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #06121e;
+}
+.x{
+    padding-top: 30px;
+    font-family: "mario";
+}
+.y{
+    font-family: "mont-black";
+}
+form{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "mont-black";
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+textarea{
+    height: 120px;
+}
+button{
+    background-color: #76d4fe;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+}
+button:hover{
+    background-color: #2e9eff;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+@media (max-width: 1024px){
+    .principal h1{ font-size: 40px; }
+    .sobre-conteudo img{ max-width: 420px; }
+}
+
+@media (max-width: 768px){
+    .cabecalho-conteudo{ padding: 10px 16px; gap:8px; align-items:center; }
+    .cabecalho-icones{ padding: 12px; gap:10px; }
+    .cabecalho-icones i{ font-size: 1.6rem; }
+    .cabecalho-logo{ flex: 0 0 auto; display:flex; align-items:center; justify-content:center; }
+    .cabecalho-logo img{ max-width: 220px; width: auto; height: auto; }
+    .cabecalho-botao img{ max-width: 44px; height: auto; }
+    .container{ flex-direction: column; padding: 20px; }
+    .sobre-conteudo{ flex-direction: column; padding: 20px 0 40px 0; align-items: center; text-align:center; }
+    .sobre-conteudo img{ max-width: 100%; width: 320px; margin-bottom: 16px; }
+    .cortes{ flex-direction: column; padding: 0 10px 20px 10px; gap: 16px;}
+    .corte{ width: 100%; }
+    .corte img{ width: 100%; height: auto; object-fit: cover; }
+    .corte img:hover{ transform: none; }
+    iframe{ height: 260px; }
+    .principal h1{ font-size: 32px; padding: 0 8px; }
+    .botao-contato{ padding: 12px 20px; font-size: 16px; }
+    form{ padding: 20px; }
+    .rodape h2{ font-size: 28px; }
+}
+
+@media (max-width: 480px){
+    .cabecalho-icones{ padding: 8px; gap: 8px; }
+    .cabecalho-icones i{ font-size: 1.4rem; }
+    .cabecalho-logo img{ max-width: 180px; width: auto; height: auto; }
+    .cabecalho-botao img{ max-width: 36px; }
+    .principal h1{ font-size: 24px; }
+    iframe{ height: 220px; }
+    .rodape h2{ font-size: 22px; }
+    .servicos-conteudo h2, .sobre-conteudo h2{ font-size: 24px; }
+    .container{ padding: 12px; }
+}
+
+
+@media (hover: none){
+    .corte img:hover{ transform: none; }
+}

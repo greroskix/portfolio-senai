@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+</head>
+
+<body data-aos="zoom-in" data-aos-delay="300">
+    <img class="titulo" src="img/h1.png" alt="title" />
+    <div id="contador">
+        <p id="dias"></p>
+        <p id="horas"></p>
+        <p id="minutos"></p>
+        <p id="segundos"></p>
+    </div>
+    <audio id="chegou" src="sounds/finish.mp3"></audio>
+
+    <div id="barra-container">
+        <div id="barra-progresso"></div>
+    </div>
+    <script>
+        AOS.init();
+
+        function atualizarContador() {
+            const agora = new Date();
+            const dataAlvo = new Date(2026, 9, 12);
+            const dataInicio = new Date(2026, 0, 1);
+            const diferenca = dataAlvo - agora;
+
+            if (diferenca < 0) {
+                document.getElementById("chegou").play();
+                document.getElementById("contador").innerHTML =
+                    `
+                <div class="receba" data-aos="fade-up" data-aos-delay="300">
+                    <p>Chegou! Happy Children's Day!</p>
+                    <img src="img/bob_esponja.gif"/>
+                </div>`
+                document.getElementById("barra-container").style.display = "none";
+                clearInterval(intervalo);
+                return;
+            }
+
+            const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+            const horas = Math.floor((diferenca % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+            const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+            document.getElementById("dias").textContent = "Dias: " + dias;
+            document.getElementById("horas").textContent = "Horas: " + horas;
+            document.getElementById("minutos").textContent = "Minutos: " + minutos;
+            document.getElementById("segundos").textContent = "Segundos: " + segundos;
+
+            const progressoTotal = dataAlvo - dataInicio;
+            const progressoAtual = agora - dataInicio;
+            const percentual = Math.min((progressoAtual / progressoTotal) * 100, 100);
+            document.getElementById("barra-progresso").style.width = percentual + "%";
+        }
+
+        atualizarContador();
+        const intervalo = setInterval(atualizarContador, 1000);
+    </script>
+</body>
+
+</html>

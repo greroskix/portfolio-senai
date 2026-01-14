@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AppleHub</title>
+    <link rel="stylesheet" href="stye.css">
+</head>
+
+<body>
+    <h1><img src="img/logo.png" alt="Logo da Apple" class="logo">AppleHub</h1>
+
+    <div class="receba">
+        <label for="produto">Produto:</label>
+        <select id="produto" onchange="mostrarModelos()">
+            <option value="" disabled selected>Escolha o produto:</option>
+            <option value="iPhone">Iphone 📱</option>
+            <option value="Airpods">AirPods 🎧</option>
+            <option value="MacBook">MacBook Air 💻</option>
+            <option value="AppleWatch">Apple Watch ⌚</option>
+        </select>
+    </div>
+
+    <div id="modelosContainer" class="modelos-container"></div>
+
+    <div class="receba">
+        <label for="valor">Valor (R$):</label>
+        <input type="number" id="valor" disabled>
+    </div>
+
+    <div class="receba">
+        <label for="quantidade">Quantidade:</label>
+        <input type="number" id="quantidade">
+    </div>
+
+    <button onclick="adicionarItem()">Adicionar a compra</button>
+    <button onclick="limparTudo()">Limpar Tudo</button>
+
+    <h3>Carrinho de Compras:</h3>
+    <ul id="listarItens"></ul>
+
+    <h3 id="mensagemDesconto" style="color: green; display: none;">Você ganhou 10% de desconto!</h3>
+    <h3>Total: R$ <span id="total">0.00</span></h3>
+
+    <script>
+        let total = 0;
+        let modeloSelecionado = null;
+
+        const modelosPorProduto = {
+            iPhone: [
+                { nome: "iPhone 13", preco: 4500, imagem: "img/iphone13.png" },
+                { nome: "iPhone 14", preco: 5300, imagem: "img/iphone14.png" },
+                { nome: "iPhone 15", preco: 6000, imagem: "img/iphone15.png" }
+            ],
+            Airpods: [
+                { nome: "AirPods Pro", preco: 1400, imagem: "img/airpodspro.png" }
+            ],
+            MacBook: [
+                { nome: "MacBook Air M1", preco: 7500, imagem: "img/macbookm1.png" }
+            ],
+            AppleWatch: [
+                { nome: "Apple Watch SE", preco: 2500, imagem: "img/watchse.png" },
+            ]
+        };
+
+        function mostrarModelos() {
+            const produtoSelecionado = document.getElementById("produto").value;
+            const modelos = modelosPorProduto[produtoSelecionado];
+            const container = document.getElementById("modelosContainer");
+
+            modeloSelecionado = null;
+            container.innerHTML = "";
+            document.getElementById("valor").value = "";
+
+            modelos.forEach((modelo) => {
+                const card = document.createElement("div");
+                card.className = "modelo-card";
+                card.innerHTML = `
+                <img src="${modelo.imagem}" alt="${modelo.nome}">
+                <p><strong>${modelo.nome}</strong></p>
+                <p>R$ ${modelo.preco.toFixed(2)}</p>
+            `;
+                card.onclick = () => {
+                    document.querySelectorAll(".modelo-card").forEach(el => el.classList.remove("selecionado"));
+                    card.classList.add("selecionado");
+                    modeloSelecionado = modelo;
+                    document.getElementById("valor").value = modelo.preco.toFixed(2); // Preenche valor
+                };
+                container.appendChild(card);
+            });
+        }
+
+        function adicionarItem() {
+            const quantidade = parseInt(document.getElementById("quantidade").value);
+
+            if (!modeloSelecionado || isNaN(quantidade) || quantidade <= 0) {
+                alert("Escolha um modelo e informe a quantidade corretamente.");
+                return;
+            }
+
+            const subtotal = modeloSelecionado.preco * quantidade;
+            total += subtotal;
+
+            const lista = document.getElementById("listarItens");
+            const item = document.createElement("li");
+            item.textContent = `${modeloSelecionado.nome} - R$${modeloSelecionado.preco.toFixed(2)} x ${quantidade} = R$${subtotal.toFixed(2)}`;
+            lista.appendChild(item);
+
+            let totalFinal = total;
+            const mensagem = document.getElementById("mensagemDesconto");
+            if (total > 500) {
+                totalFinal = total * 0.9;
+                mensagem.style.display = "block";
+            } else {
+                mensagem.style.display = "none";
+            }
+
+            document.getElementById("total").textContent = totalFinal.toFixed(2);
+
+            // Reset seleção
+            modeloSelecionado = null;
+            document.getElementById("modelosContainer").innerHTML = "";
+            document.getElementById("produto").value = "";
+            document.getElementById("valor").value = "";
+            document.getElementById("quantidade").value = "";
+        }
+
+        function limparTudo() {
+            document.getElementById("listarItens").innerHTML = "";
+            document.getElementById("total").textContent = "0.00";
+            document.getElementById("mensagemDesconto").style.display = "none";
+            document.getElementById("modelosContainer").innerHTML = "";
+            document.getElementById("produto").value = "";
+            document.getElementById("valor").value = "";
+            document.getElementById("quantidade").value = "";
+            total = 0;
+            modeloSelecionado = null;
+        }
+
+    </script>
+</body>
+
+</html>

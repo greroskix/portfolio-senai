@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista 15</title>
+    <script src="list15.js"></script>
+</head>
+<body>
+    <style>
+        h1{
+            font-family: sans-serif;
+            padding-top: 20px;
+        }
+        .botao{
+            height: 10%;
+            width: 10%;
+            margin-bottom: 2%;
+            color: white;
+            background-color: #ccc;
+            border-radius: 5px;
+            display: flex;
+        }
+        .botao:hover{
+            cursor:pointer
+        }
+        .botao-nao{
+            height: 10%;
+            width: 10%;
+            margin-bottom: 2%;
+            color: white;
+            background-color: #c70000;
+            border-radius: 5px;
+            display: flex;
+            font-size: 30px;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            text-align: center;
+        }
+        .botao-nao:hover{
+            cursor:pointer
+        }
+        .botao-2{
+            height: 50px;
+            width: 10%;
+            margin-bottom: 2%;
+            color: white;
+            background-color: #f16d00;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .receba2{
+            display: flex;
+        }
+        .botao-2:hover{
+            cursor:pointer
+        }
+        .botao-3{
+            height: 50px;
+            width: 10%;
+            margin-bottom: 2%;
+            color: white;
+            background-color: #7e99f1;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .botao-3:hover{
+            cursor:pointer;
+        }
+        #ex1{
+            padding-bottom: 20px;
+        }
+        #receba{
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        #imagem{
+            display: none;
+            width: 200px;
+            height: 200px;
+        }
+        #imagem1{
+            padding-bottom: 10px;
+        }
+        #semafaro1{
+            border-radius: 100px;
+            background-color: black;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+        #semafaro2{
+            border-radius: 100px;
+            background-color: black;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+        #semafaro3{
+            border-radius: 100px;
+            background-color: black;
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+        }
+        footer{
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            margin-top: 30px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    </style>
+
+    <h1>Exercício 1:</h1>
+    <img src="img/rodrygo.jpg" id="ex1" />
+    <button class="botao" onclick="ex1()">Clique para ocultar ou mostrar a imagem!</button>
+
+    <h1>Exercício 2:</h1>
+    <button class="botao" onclick="ex2()">Clique para deixar o Tema Escuro/Claro</button>
+
+    <h1>Exercício 3:</h1>
+    <p id="ex3">Meu nome é ______, tenho __ anos, moro em ______, estudo no _____ e faço o curso de ____________.</p>
+    <button class="botao" onclick="trocartexto()">Clique aqui para completar os espaços em brancos!</button>
+
+    <h1>Exercício 4:</h1>
+    <p id="receba">Brasil!</p>
+    <button class="botao" onclick="colorir()">Clique aqui para colorir!</button>
+
+    <h1>Exercício 5:</h1>
+    <button class="botao-nao" onclick="ex5()">Não Clique!</button>
+
+    <h1>Exercício 6:</h1>
+    <div class="receba2">
+    <button class="botao-2" onclick="porta1()">Porta 1</button>
+    <button class="botao-2" onclick="porta2()">Porta 2</button>
+    <button class="botao-2" onclick="porta3()">Porta 3</button>
+    </div>
+    <img src="" id="imagem" />
+
+    <h1>Exercício 7:</h1>
+    <img id ="imagem1" src="img/vinijr.jpeg">
+    <button class="botao" onclick="redimensionar()">Clique aqui para Redimensionar a Imagem!</button>
+
+    <h1>Exercício 8:</h1>
+    <div id="semafaro1"></div>
+    <div id="semafaro2"></div>
+    <div id="semafaro3"></div>
+    <button class="botao-3" onclick="semafaro()">Clique para mudar!</button>
+
+    <h1>Exercício 9:</h1>
+    <img id="filme1" src="img/filme-comedia.png" onmouseover="trocaimagem()" onmouseleave="destrocaimagem()" />
+    <img id="filme2" src="img/filme-acao.png" onmouseover="trocaimagem2()" onmouseleave="destrocaimagem2()" />
+    <img id="filme3" src="img/filme-romance.png" onmouseover="trocaimagem3()" onmouseleave="destrocaimagem3()" />
+
+    <footer>
+        <a href="https://github.com/greroskix" target="_blank">@greroskix :)</a>
+    </footer>
+</body>     
+</html>

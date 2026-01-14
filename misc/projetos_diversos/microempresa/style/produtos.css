@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+@font-face {
+    font-family: "Adumu";
+    src: url(../font/adumu/adumu.ttf);
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(../font/montserrat/static/Montserrat-Bold.ttf);
+}
+body{
+    background-color: #1b1e23;
+}
+header{
+    background-color: #50318d;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 150px;
+    margin: 20px 20px 20px 50px;
+}   
+nav{
+    display: flex;
+    gap: 30px;
+    margin-left: 40px;
+}
+nav a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Montserrat";
+}
+nav a:hover{
+    color: #1b98e0;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+.midias{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 150px;
+    gap: 20px;
+}
+.midias a:hover{
+    color: #c62a52;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: "Montserrat";
+    margin: 30px 0px 0px 0px;
+}
+.produtos{
+    color: white;
+    text-align: center;
+    font-family: "Montserrat";
+    align-items: center;
+    padding: 30px;
+}
+.card-grid {
+    padding: 40px;
+    margin: auto;
+    display: grid;/*posiciona os cards lado a lado*/
+    grid-template-columns: auto;/* colunas automáticas*/
+    grid-template-areas: "a a a a";/*divide o grid em 4 colunas*/
+    gap: 20px;/* espaço (vão) entre as colunas do grid*/
+    width: 1300px;/*largura total do grid*/
+    flex-wrap: wrap;
+}
+.card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    text-align: center;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+.card-content h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    font-family: "Montserrat";
+}
+.card-content p {
+    font-size: 1em;
+    color: #666;
+}
+.card-content .btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #50318d;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;/*velocidade de transição da cor do botão*/
+    font-family: "Montserrat";
+}
+.card-content .btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);/*movimenta o botão em -2px no eixo y*/
+}
+.card:hover {
+    transform: translateY(-5px);/*movimenta o cartão em -5px no eixo y*/
+}

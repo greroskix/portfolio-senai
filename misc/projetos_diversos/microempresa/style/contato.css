@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+@font-face {
+    font-family: "Adumu";
+    src: url(../font/adumu/adumu.ttf);
+}
+@font-face {
+    font-family: "Montserrat";
+    src: url(../font/montserrat/static/Montserrat-Bold.ttf);
+}
+body{
+    background-color: #1b1e23;
+}
+header{
+    background-color: #50318d;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 150px;
+    margin: 20px 20px 20px 50px;
+}   
+nav{
+    display: flex;
+    gap: 30px;
+    margin-left: 40px;
+}
+nav a{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: "Montserrat";
+}
+nav a:hover{
+    color: #1b98e0;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+.midias{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 150px;
+    gap: 20px;
+}
+.midias a:hover{
+    color: #c62a52;
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: "Montserrat";
+    margin: 125px 0px 0px 0px;
+}
+form{
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-family: "Montserrat";
+}
+label{
+    display: block;
+    margin-bottom: 5px;
+}
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    margin-bottom: 15px;
+    border-radius: 3px;
+}
+textarea{
+    height: 120px;
+}
+button{
+    background-color: #50318d;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #410278;
+    
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}

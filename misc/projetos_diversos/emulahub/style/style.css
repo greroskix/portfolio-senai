@@ -1,0 +1,318 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+  font-family: "montserrat-bold";
+  src: url(../font/montserrat/static/Montserrat-Bold.ttf);
+}
+@font-face {
+  font-family: "montserrat";
+  src: url(../font/montserrat/Montserrat-VariableFont_wght.ttf);
+}
+body{
+    background-color: #E8F1F9;
+}
+header{
+    background-color: #50318d;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: right;
+}
+.logo img{
+    width: 150px;
+    margin: 20px 20px 20px 50px;
+}
+.escrita{
+    display: flex;
+    align-items: center;
+}
+.escrita img{
+    margin-left: 55px;
+}
+.banner{
+    display: flex;
+    justify-content: center;
+}
+.midias{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding-right: 160px;
+    gap: 20px;
+}
+.midias img{
+    width: 70px;
+    height: 70px;
+}
+.midias a:hover{
+  color: #c62a52;
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: transform 0.3s;
+}
+.logo a:hover{
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: transform 0.3s;
+}
+
+/* ----- Carousel de Imagens - Banners ----- */
+
+.container-slider {
+    display: flex;
+    width: 100%;
+    min-height: 60vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1400px;
+  }
+  .container-images a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-images:hover{
+  cursor: pointer;
+  transform: translateY(-10px);
+  transition: transform 0.3s;
+}
+  .slider {
+    opacity: 0;
+    transition: opacity .2s;
+    position: absolute;
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .on {
+    opacity: 1;
+    position: relative;
+    z-index: 9999;
+  }
+  
+  #prev-button, #next-button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  
+  #prev-button img, #next-button img {
+    width: 100%;
+    height: 100%;
+  }
+  
+  #prev-button {
+    transform: rotate(180deg);
+  }
+
+
+/* ----- Final Carousel de Imagens - Banners ----- */
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    font-family: "montserrat";
+    margin: 0px 0px 0px 0px;
+}
+footer a{
+  color: currentColor;
+}
+footer a:hover{
+  color: #0056b3;
+  cursor: pointer;
+  transform: translateY(-5px);
+  transition: transform 0.3s;
+}
+
+/* ----- Cards Jogos e Emuladores ----- */
+
+.news{
+  color: #50318d;
+  text-align: center;
+  font-family: "Montserrat";
+  align-items: center;
+  padding: 40px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  gap: 20px;
+  width: 100%;
+  max-width: 1500px;
+  margin: auto;
+  padding: 40px;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s;
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.card-content {
+  padding: 15px;
+  text-align: center;
+}
+.card-content h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  font-family: "Montserrat";
+}
+.card-content p {
+  font-size: 1em;
+  color: #666;
+}
+.card-content .btn{
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #50318d;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Montserrat";
+}
+.card-content .btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  background-color: #50318d;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Montserrat";
+}
+.card-content .btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* ----- Cards Botão ----- */
+
+.card-content .btn-ds {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  width: 240px;
+  background-color: #bb0b0b;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Montserrat";
+}
+.card-content .btn-ds:hover {
+  background-color: #c44d4d;
+  transform: translateY(-2px);
+}
+.card-content .btn-emuladores {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  width: 240px;
+  background-color: #f69100;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Montserrat";
+}
+.card-content .btn-emuladores:hover {
+  background-color: #ffba6a;
+  transform: translateY(-2px);
+}
+.card-content .btn-gba {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  width: 240px;
+  background-color: #50318d;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Montserrat";
+}
+.card-content .btn-gba:hover {
+  background-color: #b870e8;
+  transform: translateY(-2px);
+}
+.card-content .btn-ps {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  width: 240px;
+  background-color: #014ba0;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Montserrat";
+}
+.card-content .btn-ps:hover {
+  background-color: #3b8eed;
+  transform: translateY(-2px);
+}
+.card-content .btn-psp{
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  font-size: 1em;
+  color: #fff;
+  width: 240px;
+  background-color: #333333;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  font-family: "Montserrat";
+}
+.card-content .btn-psp:hover {
+  background-color: #d0d0d0;
+  transform: translateY(-2px);
+}
