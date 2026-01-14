@@ -1,0 +1,376 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e5e5e5 0%, #d4d4d4 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container principal do portfólio */
+.container-portfolio {
+    max-width: 480px;
+    width: 100%;
+    background: white;
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+/* Seção do cabeçalho */
+.secao-cabecalho {
+    background: linear-gradient(135deg, #f8f6f2 0%, #ede9e1 100%);
+    padding: 50px 30px 40px;
+    text-align: center;
+}
+
+/* Imagem de perfil */
+.imagem-perfil {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    border: 5px solid white;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.imagem-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Nome do desenvolvedor */
+.nome {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 5px;
+    letter-spacing: 0.5px;
+}
+
+/* Título/profissão */
+.titulo {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+/* Container dos botões de navegação */
+.botoes-navegacao {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 15px;
+}
+
+/* Estilo dos botões de navegação */
+.botao-nav {
+    background: white;
+    border: 2px solid #2c2c2c;
+    padding: 16px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #2c2c2c;
+    font-size: 0.95em;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    text-align: center;
+    cursor: pointer;
+}
+
+.botao-nav:hover {
+    background: #2c2c2c;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão escuro (alternativo) */
+.botao-nav.escuro {
+    background: #2c2c2c;
+    color: white;
+    border-color: #2c2c2c;
+}
+
+.botao-nav.escuro:hover {
+    background: #444;
+    border-color: #444;
+}
+
+/* Seção sobre mim */
+.secao-sobre {
+    background: #3a3a3a;
+    padding: 40px 30px;
+    color: white;
+}
+
+/* Cabeçalho da seção sobre */
+.cabecalho-sobre {
+    margin-bottom: 25px;
+}
+
+/* Handle/apelido do usuário */
+.handle-usuario {
+    font-size: 0.9em;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Texto sobre mim */
+.texto-sobre {
+    line-height: 1.8;
+    color: #ddd;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+}
+
+/* Stack de tecnologias */
+.pilha-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+/* Badge de tecnologia */
+.badge-tecnologia {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Links sociais */
+.links-sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+    padding-bottom: 10px;
+}
+
+.link-social {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.link-social img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.link-social:hover {
+    opacity: 1;
+    transform: translateY(-3px);
+}
+
+/* Modal para projetos */
+.janela-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.janela-modal.ativa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Conteúdo do modal */
+.conteudo-modal {
+    background: white;
+    border-radius: 20px;
+    max-width: 600px;
+    width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+/* Cabeçalho do modal */
+.cabecalho-modal {
+    background: #2c2c2c;
+    color: white;
+    padding: 30px;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+.cabecalho-modal h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+}
+
+/* Botão fechar modal */
+.botao-fechar {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.botao-fechar:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: rotate(90deg);
+}
+
+/* Corpo do modal */
+.corpo-modal {
+    padding: 30px;
+}
+
+/* Lista de projetos */
+.lista-projetos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Link do projeto */
+.link-projeto {
+    display: block;
+    padding: 18px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #2c2c2c;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.link-projeto:hover {
+    background: #f0f0f0;
+    border-color: #2c2c2c;
+    transform: translateX(5px);
+}
+
+/* Informações do projeto */
+.info-projeto h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    color: #2c2c2c;
+}
+
+.info-projeto p {
+    font-size: 0.85em;
+    color: #666;
+    line-height: 1.4;
+}
+
+/* Informações de contato */
+.info-contato {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.item-contato {
+    padding: 20px;
+    background: #f8f8f8;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.item-contato:hover {
+    background: #f0f0f0;
+    border-color: #2c2c2c;
+}
+
+.item-contato h3 {
+    font-size: 0.9em;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.item-contato a {
+    color: #2c2c2c;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.item-contato a:hover {
+    color: #666;
+}
+
+.item-contato p {
+    color: #2c2c2c;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Responsividade para mobile */
+@media (max-width: 600px) {
+    .container-portfolio {
+        border-radius: 0;
+    }
+
+    body {
+        padding: 0;
+    }
+
+    .janela-modal {
+        padding: 0;
+    }
+
+    .conteudo-modal {
+        border-radius: 0;
+        max-height: 100vh;
+    }
+
+    .cabecalho-modal {
+        border-radius: 0;
+    }
+}

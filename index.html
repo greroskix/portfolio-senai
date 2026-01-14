@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>André Greroski - Portfólio SENAI</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <div class="container-portfolio">
+        <!-- Seção do Cabeçalho -->
+        <div class="secao-cabecalho">
+            <div class="imagem-perfil">
+                <img src="assets/foto-perfil.jpg" alt="Foto de André Greroski">
+            </div>
+            <h1 class="nome">ANDRÉ GREROSKI</h1>
+            <p class="titulo">Técnico em Desenvolvimento de Sistemas</p>
+            
+            <div class="botoes-navegacao">
+                <a href="#sobre" class="botao-nav" onclick="rolarParaSobre(event)">SOBRE MIM</a>
+                <a href="#" class="botao-nav escuro" onclick="abrirModal('saep', event)">PROJETO SAEP</a>
+                <a href="#" class="botao-nav" onclick="abrirModal('principais', event)">PROJETOS PRINCIPAIS</a>
+                <a href="#" class="botao-nav escuro" onclick="abrirModal('contato', event)">CONTATO</a>
+            </div>
+        </div>
+
+        <!-- Seção Sobre Mim -->
+        <div class="secao-sobre" id="sobre">
+            <div class="cabecalho-sobre">
+                <div class="handle-usuario">@greroskix</div>
+            </div>
+            
+            <div class="texto-sobre">
+                <p style="margin-bottom: 15px;">
+                    Sou um profissional em formação na área de Tecnologia da Informação, formado em Desenvolvimento de Sistemas pelo Senai. Busco aprender cada dia mais, e poder criar novas experiências digitais, interativas e funcionais para os usuários.
+                </p>
+                <p>
+                    Este portfólio reúne todos os meus projetos desenvolvidos durante o período do curso no SENAI, demonstrando competências em desenvolvimento front-end, lógica de programação e design de interfaces adquiridas ao longo da formação técnica.
+                </p>
+            </div>
+
+            <div class="pilha-tecnologias">
+                <span class="badge-tecnologia">HTML5</span>
+                <span class="badge-tecnologia">CSS3</span>
+                <span class="badge-tecnologia">JavaScript</span>
+                <span class="badge-tecnologia">SQL</span>
+                <span class="badge-tecnologia">Git</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="modal-saep" class="janela-modal">
+        <div class="conteudo-modal">
+            <div class="cabecalho-modal">
+                <h2>Projeto SAEP</h2>
+                <p>Projeto de Avaliação Técnica</p>
+                <button class="botao-fechar" onclick="fecharModal('saep')">&times;</button>
+            </div>
+            <div class="corpo-modal">
+                <div class="lista-projetos">
+                    <a href="./projeto_prova_saep/index.html" class="link-projeto">
+                        <div class="info-projeto">
+                            <h3>Gerenciador de Almoxarifado</h3>
+                            <p>Sistema completo para controle de estoque com alertas de nível crítico, rastreabilidade de movimentações e histórico detalhado.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Projetos Principais -->
+    <div id="modal-principais" class="janela-modal">
+        <div class="conteudo-modal">
+            <div class="cabecalho-modal">
+                <h2>Projetos Principais</h2>
+                <p>Aplicações completas e interativas</p>
+                <button class="botao-fechar" onclick="fecharModal('principais')">&times;</button>
+            </div>
+            <div class="corpo-modal">
+                <div class="lista-projetos">
+                    <a href="./projetos_principais/ghostHunt/index.html" class="link-projeto">
+                        <div class="info-projeto">
+                            <h3>Caça Fantasma</h3>
+                            <p>Jogo de agilidade contra o tempo onde fantasmas coloridos valem mais pontos.</p>
+                        </div>
+                    </a>
+
+                    <a href="./projetos_principais/memorix/index.html" class="link-projeto">
+                        <div class="info-projeto">
+                            <h3>Memorix</h3>
+                            <p>Jogo da memória com efeitos sonoros e sistema de persistência de dados.</p>
+                        </div>
+                    </a>
+
+                    <a href="./projetos_principais/dungeons&senai/index.html" class="link-projeto">
+                        <div class="info-projeto">
+                            <h3>Dungeons & SENAI</h3>
+                            <p>RPG interativo baseado em texto com ramificações de escolhas.</p>
+                        </div>
+                    </a>
+
+                    <a href="./projetos_principais/gerador_de_senhas/index.html" class="link-projeto">
+                        <div class="info-projeto">
+                            <h3>Gerador de Senhas</h3>
+                            <p>Utilitário para criação de senhas seguras com parâmetros customizáveis.</p>
+                        </div>
+                    </a>
+
+                    <a href="./projetos_principais/termo/index.html" class="link-projeto">
+                        <div class="info-projeto">
+                            <h3>Termo</h3>
+                            <p>Desafio de palavras focado em lógica de comparação e estados de jogo.</p>
+                        </div>
+                    </a>
+
+                    <a href="./projetos_principais/barbearia/index.html" class="link-projeto">
+                        <div class="info-projeto">
+                            <h3>Barbearia</h3>
+                            <p>Landing page moderna para serviços de barbearia com animações e design responsivo.</p>
+                        </div>
+                    </a>
+
+                    <a href="./projetos_principais/controle_financeiro/index.html" class="link-projeto">
+                        <div class="info-projeto">
+                            <h3>Controle Financeiro</h3>
+                            <p>Sistema de controle financeiro pessoal para gerenciamento de entradas e saídas.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Contato -->
+    <div id="modal-contato" class="janela-modal">
+        <div class="conteudo-modal">
+            <div class="cabecalho-modal">
+                <h2>Contato</h2>
+                <p>Entre em contato comigo</p>
+                <button class="botao-fechar" onclick="fecharModal('contato')">&times;</button>
+            </div>
+            <div class="corpo-modal">
+                <div class="info-contato">
+                    <div class="item-contato">
+                        <h3>Email</h3>
+                        <a href="mailto:andrezanattagreroski@gmail.com">andrezanattagreroski@gmail.com</a>
+                    </div>
+                    
+                    <div class="item-contato">
+                        <h3>Telefone</h3>
+                        <a href="tel:+5511975460737">(11) 97546-0737</a>
+                    </div>
+                    
+                    <div class="item-contato">
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/andregreroski" target="_blank">linkedin.com/in/andregreroski</a>
+                    </div>
+                    
+                    <div class="item-contato">
+                        <h3>GitHub</h3>
+                        <a href="https://www.github.com/greroskix" target="_blank">github.com/greroskix</a>
+                    </div>
+                    
+                    <div class="item-contato">
+                        <h3>Localização</h3>
+                        <p>São Paulo, Brasil</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
