@@ -15,7 +15,7 @@
 ## 🌐 Página Principal do Portfólio
 
 ### 🔗 Acesse o Portfólio Online:
-**[👉 Clique aqui para visualizar o portfólio no GitHub Pages](https://greroskix.github.io/portfolio-senai/)**
+**[👉 Clique aqui para visualizar o portfólio pelo Netlify](https://portfoliosenaids.netlify.app/)**
 
 ---
 
